@@ -1,0 +1,12 @@
+{
+  "_status": "EXAMPLE ONLY. Not read by the newsletter. Never put secrets in this file.",
+  "method": "power-automate | graph",
+  "newsletterUrl": "https://<your-intranet-or-sharepoint>/inside-bioani/index.html",
+  "sender": "hr@bioani.in",
+  "replyTo": "hr@bioani.in",
+  "recipients": "<all-staff distribution list address>",
+  "testRecipients": ["<editor address>"],
+  "subjectTemplate": "Inside BioAni — {label} is out",
+  "requireApproval": true,
+  "sendOncePerEdition": true
+}
