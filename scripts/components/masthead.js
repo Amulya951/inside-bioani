@@ -26,7 +26,8 @@
   ];
 
   const chev = '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
-  const brand = '<i>Inside</i><b>BioAni</b>';
+  const logo = (IB.brandLogos && IB.brandLogos.bioani) ? '<img class="brand-logo" src="' + IB.brandLogos.bioani + '" alt="" width="120" height="34">' : '';
+  const brand = logo + '<i>Inside</i><b>BioAni</b>';
 
   IB.components.Nav = {
     render: function () {

@@ -87,8 +87,8 @@
          banner. Group titles and layout are untouched — this only adds the
          wrapping banner around them. */
       const BRANDS = [
-        { title: 'Zenivet', groupKeys: ['rbm', 'tm'] },
-        { title: 'Zeniqua', groupKeys: ['bd'] }
+        { title: 'Zenivet', logo: 'zenivet', groupKeys: ['rbm', 'tm'] },
+        { title: 'Zeniqua', logo: 'zeniqua', groupKeys: ['bd'] }
       ];
       const byKey = {};
       groups.forEach(x => { byKey[x.g.key] = x; });
@@ -98,7 +98,10 @@
         const bGroups = b.groupKeys.map(k => byKey[k]).filter(Boolean);
         if (!bGroups.length) return;
         bGroups.forEach(x => used.add(x.g.key));
-        sections += '<div class="jbrand"><div class="jbrand-h"><span class="jbrand-name">' + esc(b.title) + '</span></div>' + bGroups.map(renderGroup).join('') + '</div>';
+        const mark = (IB.brandLogos && IB.brandLogos[b.logo])
+          ? '<img class="jbrand-logo" src="' + IB.brandLogos[b.logo] + '" alt="' + esc(b.title) + '">'
+          : '<span class="jbrand-name">' + esc(b.title) + '</span>';
+        sections += '<div class="jbrand"><div class="jbrand-h">' + mark + '</div>' + bGroups.map(renderGroup).join('') + '</div>';
       });
       groups.forEach(x => { if (!used.has(x.g.key)) sections += renderGroup(x); });
 
