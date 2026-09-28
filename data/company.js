@@ -19,12 +19,11 @@ IB.leadership = [
   // Source: "Core Leadership Team" slide (New Hire Orientation), in slide order.
   { name: 'Kapil Kumar',         designation: 'Director', area: 'India Business Nutra Agri & Animal',      photo: 'leader-kapil-kumar.jpg' },
   { name: 'Dr. Ronak S. Chhaya', designation: 'Director', area: 'R&D and Sourcing',                        photo: 'leader-ronak-chhaya.jpg' },
-  { name: 'Dr. Kuldeep Sharma',  designation: 'Director', area: 'Registration and Agronomy Agriculture',   photo: 'leader-kuldeep-sharma.jpg' },
-  { name: 'Ravi Kumar',          designation: 'Director', area: 'International and Alliance Agriculture', photo: 'leader-ravi-kumar.jpg' },
+  { name: 'Dr. Kuldeep Sharma',  designation: 'Vice President', area: 'Registration and Agronomy Agriculture',   photo: 'leader-kuldeep-sharma.jpg' },
   { name: 'Kishore Mitra',       designation: 'Director', area: 'Strategy and New Business',               photo: 'leader-kishore-mitra.jpg' },
   { name: 'Pranav Goswami',      designation: 'Director', area: 'Media Relations',                         photo: 'leader-pranav-goswami.jpg' },
-  { name: 'Shivani Pawar',       designation: 'Director', area: 'Human Resources',                         photo: 'leader-shivani-pawar.jpg' },
-  { name: 'Rajeev Chakraborty',  designation: 'Director', area: 'Creative & Marketing',                    photo: 'leader-rajeev-chakraborty.jpg' },
+  { name: 'Shivani Pawar',       designation: 'Group CHRO', area: 'Human Resources',                       photo: 'leader-shivani-pawar.jpg' },
+  { name: 'Rajeev Chakraborty',  designation: 'Director', area: 'Creative & Marketing (Midaas)',           photo: 'leader-rajeev-chakraborty.jpg' },
   { name: 'Rinila Sarkar',       designation: 'Director', area: 'Organization Relationship',               photo: 'leader-rinila-sarkar.jpg' }
 ];
 

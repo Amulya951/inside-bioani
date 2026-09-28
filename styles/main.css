@@ -299,6 +299,10 @@ body.editor .editor-bar { display: block; position: fixed; bottom: 16px; left: 1
 .joiners .sec-head h2 { color: var(--ivory); }
 .joiners .sec-head h2 em { color: var(--gold-300); font-weight: 500; }
 .jgroup + .jgroup { margin-top: clamp(56px, 7vw, 88px); }
+.jbrand + .jbrand, .jbrand + .jgroup, .jgroup + .jbrand { margin-top: clamp(64px, 8vw, 100px); }
+.jbrand-h { margin-bottom: 22px; }
+.jbrand-name { display: inline-block; font-family: var(--sans); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: clamp(13px, 1.4vw, 15px); color: var(--navy-900); background: linear-gradient(100deg, #B8912A, #E6C766 45%, #FFF1C2 50%, #E6C766 55%, #B8912A); padding: 8px 20px; border-radius: 999px; }
+.jbrand .jgroup-h { border-bottom-color: rgba(230, 199, 102, .2); }
 .jgroup-h { display: flex; align-items: baseline; gap: 16px; margin-bottom: 26px; padding-bottom: 14px; border-bottom: 1px solid rgba(230, 199, 102, .35); }
 .jgroup-h h3 { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(26px, 2.8vw, 36px); color: var(--gold-300); }
 .jgroup-h span { font-weight: 700; color: rgba(255, 251, 240, .8); }

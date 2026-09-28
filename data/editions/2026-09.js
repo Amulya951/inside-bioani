@@ -38,8 +38,8 @@ IB.editions['2026-09'] = {
   newJoiners: [
     'gurpal-singh', 'pankaj-chauhan', 'gaurav-yadav', 'munish-sharma',
     'bikramjit-singh', 'sukhchain-singh', 'amit-kumar', 'ravi-pratap-singh',
-    'boby-kumar', 'anzar-ahmad-dar', 'abhishek-pandey', 'rakesh-kumar-singh',
-    'mukesh-arya'
+    'boby-kumar', 'abhishek-pandey', 'rakesh-kumar-singh', 'md-jishan',
+    'piyush-mishra'
   ],
 
   /* ---- Promotions ----

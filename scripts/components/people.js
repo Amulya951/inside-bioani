@@ -79,15 +79,35 @@
         '<div class="jcard-b"><h4>' + esc(p.name) + '</h4><p>' + esc(IB.fmtDesignation(p.designation)) + '</p>' + tbc(p) + flagNotes(p) + '</div></article>';
       const feat = p => '<article class="jfeat">' + IB.ui.portrait(p) +
         '<div class="jfeat-b"><span class="welcome">Welcome aboard</span><h4>' + esc(p.name) + '</h4><p>' + esc(IB.fmtDesignation(p.designation)) + '</p>' + tbc(p) + flagNotes(p) + '</div></article>';
+      const renderGroup = x => '<div class="jgroup"><div class="jgroup-h"><h3>' + esc(x.g.title) + '</h3><span>' + x.people.length + '</span></div>' +
+        (x.g.key === 'rbm' ? '<div class="jfeature">' + x.people.map(feat).join('') + '</div>'
+                           : '<div class="jcards" style="--cols:' + (x.people.length <= 6 ? Math.max(x.people.length, 3) : 4) + '">' + x.people.map(card).join('') + '</div>') + '</div>';
+
+      /* Brand groupings: nest existing joiner groups under a Zenivet / Zeniqua
+         banner. Group titles and layout are untouched — this only adds the
+         wrapping banner around them. */
+      const BRANDS = [
+        { title: 'Zenivet', groupKeys: ['rbm', 'tm'] },
+        { title: 'Zeniqua', groupKeys: ['bd'] }
+      ];
+      const byKey = {};
+      groups.forEach(x => { byKey[x.g.key] = x; });
+      const used = new Set();
+      let sections = '';
+      BRANDS.forEach(b => {
+        const bGroups = b.groupKeys.map(k => byKey[k]).filter(Boolean);
+        if (!bGroups.length) return;
+        bGroups.forEach(x => used.add(x.g.key));
+        sections += '<div class="jbrand"><div class="jbrand-h"><span class="jbrand-name">' + esc(b.title) + '</span></div>' + bGroups.map(renderGroup).join('') + '</div>';
+      });
+      groups.forEach(x => { if (!used.has(x.g.key)) sections += renderGroup(x); });
 
       return '<section class="sec joiners on-dark" id="new-joiners" aria-labelledby="join-h"><div class="wrap">' +
         '<div class="sec-head split"><div><div class="runhead">People: welcome to BioAni</div>' +
         '<h2 class="display h-xl" id="join-h">New faces.<br><em class="italic">New energy.</em></h2></div>' +
         '<p class="lede">' + esc(IB.cap(IB.numWord(people.length))) + ' colleagues join us this edition. ' + esc(IB.joinerSummary(people)) +
         ' Say hello when you see them, and help them find their feet.</p></div>' +
-        groups.map(x => '<div class="jgroup"><div class="jgroup-h"><h3>' + esc(x.g.title) + '</h3><span>' + x.people.length + '</span></div>' +
-          (x.g.key === 'rbm' ? '<div class="jfeature">' + x.people.map(feat).join('') + '</div>'
-                             : '<div class="jcards" style="--cols:' + (x.people.length <= 6 ? Math.max(x.people.length, 3) : 4) + '">' + x.people.map(card).join('') + '</div>') + '</div>').join('') +
+        sections +
         '</div></section>';
     }
   };

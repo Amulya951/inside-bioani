@@ -118,14 +118,14 @@ IB.employees = [
     dob: "08-Sep-87", designation: "Territory Manager", department: null, joiningDate: null, photo: null },
   { id: "ankit-pathak", name: "Ankit Pathak", firstName: null, middleName: null, lastName: null,
     dob: "04-Oct-00", designation: null, department: null, joiningDate: null, photo: null },
-  { id: "anzar-ahmad-dar", name: "Anzar Ahmad Dar", firstName: null, middleName: null, lastName: null,
-    dob: "25-Jul-95", designation: "Business Development Executive", department: null, joiningDate: null, photo: null },
   { id: "abhishek-pandey", name: "Abhishek Pandey", firstName: null, middleName: null, lastName: null,
     dob: "13-Jul-02", designation: "Business Development Executive", department: null, joiningDate: null, photo: null },
-  { id: "rakesh-kumar-singh", name: "Rakesh Kumar Singh", firstName: null, middleName: null, lastName: null,
-    dob: "15-Jun-00", designation: "Business Development Executive", department: null, joiningDate: null, photo: null },
-  { id: "mukesh-arya", name: "Mukesh Arya", firstName: null, middleName: null, lastName: null,
-    dob: "01-Nov-91", designation: "Business Development Executive", department: null, joiningDate: null, photo: null, flags: ["designation-unconfirmed"] },
+  { id: "rakesh-kumar-singh", name: "Mukesh Arya", firstName: null, middleName: null, lastName: null,
+    dob: "15-Jun-00", designation: "Business Development Executive", department: null, joiningDate: null, photo: "Rakesh_Kumar_Singh.jpg" },
   { id: "boby-kumar", name: "Boby Kumar", firstName: null, middleName: null, lastName: null,
-    dob: null, designation: "Territory Manager", department: null, joiningDate: null, photo: null, flags: ["dob-missing"] }
+    dob: null, designation: "Territory Manager", department: null, joiningDate: null, photo: null, flags: ["dob-missing"] },
+  { id: "md-jishan", name: "Md Jishan", firstName: null, middleName: null, lastName: null,
+    dob: null, designation: "Business Development Executive", department: null, joiningDate: null, photo: null, flags: ["dob-missing"] },
+  { id: "piyush-mishra", name: "Piyush Mishra", firstName: null, middleName: null, lastName: null,
+    dob: null, designation: "Business Development Executive", department: null, joiningDate: null, photo: null, flags: ["dob-missing"] }
 ];
