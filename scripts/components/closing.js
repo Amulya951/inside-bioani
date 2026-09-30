@@ -29,7 +29,7 @@
     render: function (ed) {
       // Only editions whose data file is loaded can be opened; newest first.
       const idx = (IB.editionIndex || []).filter(e => IB.editions[e.id]).slice().sort((a, b) => b.id.localeCompare(a.id));
-      const dots = '<svg class="dots" viewBox="0 0 90 90" aria-hidden="true"><circle cx="45" cy="30" r="22" fill="rgba(35,122,78,.6)" stroke="#9FD3AE" stroke-width="1.5"/><circle cx="24" cy="70" r="10" fill="rgba(230,199,102,.35)" stroke="#E6C766" stroke-width="1.5"/><circle cx="72" cy="66" r="6" fill="rgba(221,238,223,.3)"/></svg>';
+      const dots = '<svg class="dots" viewBox="0 0 90 90" aria-hidden="true"><circle cx="45" cy="30" r="22" fill="rgba(94,154,120,.6)" stroke="#A9CDB8" stroke-width="1.5"/><circle cx="24" cy="70" r="10" fill="rgba(155,201,46,.35)" stroke="#9BC92E" stroke-width="1.5"/><circle cx="72" cy="66" r="6" fill="rgba(220,233,225,.3)"/></svg>';
       const covers = idx.map(e => {
         const parts = e.label.split(' ');
         const isCur = e.id === ed.id;

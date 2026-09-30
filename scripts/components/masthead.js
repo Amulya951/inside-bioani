@@ -110,9 +110,9 @@
     [40, 84, 30, 1.2, .6, 'y'], [8, 22, 40, 1.1, .6, 'l'], [95, 70, 44, .7, .65, 'g']
   ];
   const variants = {
-    g: ['rgba(35,122,78,.55)', '#7FCB9B'],
-    y: ['rgba(230,199,102,.35)', '#E6C766'],
-    l: ['rgba(221,238,223,.18)', '#DDEEDF']
+    g: ['rgba(94,154,120,.55)', '#A9CDB8'],
+    y: ['rgba(155,201,46,.35)', '#9BC92E'],
+    l: ['rgba(220,233,225,.18)', '#DCE9E1']
   };
 
   IB.components.Cover = {
@@ -128,7 +128,7 @@
       lines.push(['#game', null, 'Quick game corner', 'Six questions. One flask to fill.']);
       lines.splice(4);
 
-      const star = IB.svg.cell('rgba(230,199,102,.2)', '#E6C766');
+      const star = IB.svg.cell('rgba(155,201,46,.2)', '#9BC92E');
       const cells = CELLS.map(c => {
         const v = variants[c[5]];
         return '<span class="c" style="left:' + c[0] + '%;top:' + c[1] + '%;--s:' + c[2] + 'px;--d:' + c[3] + 's;--o:' + c[4] +
@@ -137,7 +137,7 @@
       const sparks = [[62, 20], [70, 58], [94, 52], [54, 64], [8, 30], [40, 14], [88, 88]]
         .map(s => '<i class="sparkle" style="left:' + s[0] + '%;top:' + s[1] + '%"></i>').join('');
 
-      const confetti = [[60, 9, '#E6C766', 20], [74, 46, '#9FD3AE', -30], [51, 54, '#E6C766', 60], [12, 40, '#9FD3AE', 15], [88, 30, '#FFFBF0', -50], [30, 88, '#E6C766', 35], [66, 86, '#9FD3AE', -15], [97, 58, '#E6C766', 70]]
+      const confetti = [[60, 9, '#9BC92E', 20], [74, 46, '#A9CDB8', -30], [51, 54, '#9BC92E', 60], [12, 40, '#A9CDB8', 15], [88, 30, '#F8F6F1', -50], [30, 88, '#9BC92E', 35], [66, 86, '#A9CDB8', -15], [97, 58, '#9BC92E', 70]]
         .map(c => '<i class="confetto" style="left:' + c[0] + '%;top:' + c[1] + '%;background:' + c[2] + ';transform:rotate(' + c[3] + 'deg)"></i>').join('');
       return '<section class="cover on-dark" id="cover" aria-labelledby="mast">' +
         '<div class="cells" aria-hidden="true">' + cells + sparks + confetti + '</div>' +
@@ -156,7 +156,7 @@
               '<span class="t"><b>' + esc(l[2]) + '</b><span>' + esc(l[3]) + '</span></span></a></li>').join('') + '</ul></nav>' +
           '</div>' +
         '</div>' +
-        '<div class="cover-edge" aria-hidden="true"><svg viewBox="0 0 1440 130" preserveAspectRatio="none"><path d="M0 70 C 180 20, 330 120, 520 84 S 860 10, 1040 60 S 1320 110, 1440 50 L1440 130 L0 130 Z" fill="#FFFBF0"/><path d="M0 70 C 180 20, 330 120, 520 84 S 860 10, 1040 60 S 1320 110, 1440 50" fill="none" stroke="#C9A13B" stroke-width="2"/></svg></div>' +
+        '<div class="cover-edge" aria-hidden="true"><svg viewBox="0 0 1440 130" preserveAspectRatio="none"><path d="M0 70 C 180 20, 330 120, 520 84 S 860 10, 1040 60 S 1320 110, 1440 50 L1440 130 L0 130 Z" fill="#F8F6F1"/><path d="M0 70 C 180 20, 330 120, 520 84 S 860 10, 1040 60 S 1320 110, 1440 50" fill="none" stroke="#9BC92E" stroke-width="2"/></svg></div>' +
       '</section>';
     }
   };

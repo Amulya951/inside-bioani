@@ -5,10 +5,10 @@
   const IB = window.IB, esc = IB.esc;
 
   const MOTIFS = {
-    leaf: '<svg class="motif" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100C20 50 55 18 104 16c0 50-32 86-84 84z" fill="#DDEEDF" stroke="#1B5E3C" stroke-width="2.5"/><path d="M24 96C48 70 70 50 96 26" stroke="#1B5E3C" stroke-width="2.5" fill="none"/><path d="M44 74l-2-20M58 60l-1-22M72 48l2-18M50 70l20 2M64 56l20 0" stroke="#1B5E3C" stroke-width="1.6"/><circle cx="96" cy="92" r="12" fill="#E6C766"/></svg>',
-    capsule: '<svg class="motif" viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-35 60 60)"><rect x="18" y="42" width="84" height="36" rx="18" fill="#fff" stroke="#0E2447" stroke-width="2.5"/><path d="M60 42h24a18 18 0 0 1 0 36H60z" fill="#1A3A6B"/></g><circle cx="26" cy="26" r="7" fill="#E6C766"/><circle cx="98" cy="96" r="5" fill="#237A4E"/><circle cx="96" cy="24" r="3" fill="#1A3A6B"/></svg>',
-    paw: '<svg class="motif" viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="76" rx="24" ry="20" fill="#1B5E3C"/><ellipse cx="32" cy="50" rx="9" ry="12" fill="#1B5E3C"/><ellipse cx="50" cy="34" rx="9" ry="12" fill="#1B5E3C"/><ellipse cx="72" cy="34" rx="9" ry="12" fill="#1B5E3C"/><ellipse cx="89" cy="50" rx="9" ry="12" fill="#1B5E3C"/><path d="M60 64l3 7 7 .5-5.5 4.5 2 7-6.5-4-6.5 4 2-7-5.5-4.5 7-.5z" fill="#E6C766"/></svg>',
-    cell: '<span class="motif">' + IB.svg.cell('rgba(221,238,223,.18)', '#E6C766') + '</span>'
+    leaf: '<svg class="motif" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100C20 50 55 18 104 16c0 50-32 86-84 84z" fill="#DCE9E1" stroke="#1B4D43" stroke-width="2.5"/><path d="M24 96C48 70 70 50 96 26" stroke="#1B4D43" stroke-width="2.5" fill="none"/><path d="M44 74l-2-20M58 60l-1-22M72 48l2-18M50 70l20 2M64 56l20 0" stroke="#1B4D43" stroke-width="1.6"/><circle cx="96" cy="92" r="12" fill="#9BC92E"/></svg>',
+    capsule: '<svg class="motif" viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-35 60 60)"><rect x="18" y="42" width="84" height="36" rx="18" fill="#fff" stroke="#1B4D43" stroke-width="2.5"/><path d="M60 42h24a18 18 0 0 1 0 36H60z" fill="#2B6254"/></g><circle cx="26" cy="26" r="7" fill="#9BC92E"/><circle cx="98" cy="96" r="5" fill="#5E9A78"/><circle cx="96" cy="24" r="3" fill="#2B6254"/></svg>',
+    paw: '<svg class="motif" viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="76" rx="24" ry="20" fill="#1B4D43"/><ellipse cx="32" cy="50" rx="9" ry="12" fill="#1B4D43"/><ellipse cx="50" cy="34" rx="9" ry="12" fill="#1B4D43"/><ellipse cx="72" cy="34" rx="9" ry="12" fill="#1B4D43"/><ellipse cx="89" cy="50" rx="9" ry="12" fill="#1B4D43"/><path d="M60 64l3 7 7 .5-5.5 4.5 2 7-6.5-4-6.5 4 2-7-5.5-4.5 7-.5z" fill="#9BC92E"/></svg>',
+    cell: '<span class="motif">' + IB.svg.cell('rgba(220,233,225,.18)', '#9BC92E') + '</span>'
   };
 
   /* ---------------- Our business ---------------- */
@@ -74,7 +74,7 @@
           (pr.amazonUrl ? '<a class="btn btn-navy" href="' + esc(pr.amazonUrl) + '" target="_blank" rel="noopener">View on Amazon <span aria-hidden="true">\u2197</span><span class="sr-only"> (opens in a new tab)</span></a>' : '') +
           (pr.fullName ? '<p class="full">' + esc(pr.fullName) + '</p>' : '');
       } else {
-        stage = '<div class="stage"><div class="stage-empty">' + IB.svg.cell('#fff', '#1B5E3C') + '<span>Product photograph coming soon</span></div></div>';
+        stage = '<div class="stage"><div class="stage-empty">' + IB.svg.cell('#fff', '#1B4D43') + '<span>Product photograph coming soon</span></div></div>';
         body = '<span class="tag">Product of the month</span><h3>This month\u2019s spotlight</h3>' +
           '<p class="lede">Each edition, one product from across our businesses takes centre stage: what it is, what goes into it, and the people behind it.</p>' +
           '<p class="editor-note">Editor: set productSpotlight in data/editions/' + esc(ed.id) + '.js.</p>';
@@ -160,14 +160,14 @@
   function flaskSVG() {
     return '<svg class="flask" viewBox="0 0 200 270" role="img" aria-labelledby="flask-t"><title id="flask-t">A flask that fills with green microalgae as you answer correctly</title>' +
       '<defs><clipPath id="fclip"><path d="M78 20h44v70l58 140a20 20 0 0 1-18 28H38a20 20 0 0 1-18-28L78 90z"/></clipPath>' +
-      '<linearGradient id="alg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FB47F"/><stop offset="1" stop-color="#1B5E3C"/></linearGradient></defs>' +
-      '<g clip-path="url(#fclip)"><rect width="200" height="270" fill="#F2F7FC"/>' +
+      '<linearGradient id="alg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E9A78"/><stop offset="1" stop-color="#1B4D43"/></linearGradient></defs>' +
+      '<g clip-path="url(#fclip)"><rect width="200" height="270" fill="#EEF3EF"/>' +
       '<g class="liquid" style="transform:translateY(' + (FLASK_BOTTOM - FLASK_TOP + 20) + 'px)"><path d="M0 70 q25 -10 50 0 t50 0 t50 0 t50 0 V300 H0z" fill="url(#alg)"/>' +
-      [[60, 200, 0], [100, 230, .8], [130, 190, 1.6], [85, 170, 2.2], [150, 225, 1.1]].map(b => '<circle class="bub" cx="' + b[0] + '" cy="' + b[1] + '" r="5" fill="#DDEEDF" style="animation-delay:' + b[2] + 's"/>').join('') +
+      [[60, 200, 0], [100, 230, .8], [130, 190, 1.6], [85, 170, 2.2], [150, 225, 1.1]].map(b => '<circle class="bub" cx="' + b[0] + '" cy="' + b[1] + '" r="5" fill="#DCE9E1" style="animation-delay:' + b[2] + 's"/>').join('') +
       '</g></g>' +
-      '<path d="M78 20h44v70l58 140a20 20 0 0 1-18 28H38a20 20 0 0 1-18-28L78 90z" fill="none" stroke="#0E2447" stroke-width="4" stroke-linejoin="round"/>' +
-      '<rect x="68" y="8" width="64" height="14" rx="5" fill="#C9A13B"/>' +
-      '<path d="M140 150h14M146 180h14M152 210h14" stroke="#0E2447" stroke-width="2" opacity=".4"/></svg>';
+      '<path d="M78 20h44v70l58 140a20 20 0 0 1-18 28H38a20 20 0 0 1-18-28L78 90z" fill="none" stroke="#1B4D43" stroke-width="4" stroke-linejoin="round"/>' +
+      '<rect x="68" y="8" width="64" height="14" rx="5" fill="#9BC92E"/>' +
+      '<path d="M140 150h14M146 180h14M152 210h14" stroke="#1B4D43" stroke-width="2" opacity=".4"/></svg>';
   }
 
   IB.components.QuickGame = {

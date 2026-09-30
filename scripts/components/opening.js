@@ -15,7 +15,7 @@
       const who = { name: f.name || 'Founder', photo: f.photo };
       const signName = f.name ? esc(f.name) : '';
       const signRole = esc((f.designation || 'Founder') + ', ' + IB.config.company);
-      const seal = IB.svg.cell('#F6E9C2', '#C9A13B');
+      const seal = IB.svg.cell('#EEF5D6', '#9BC92E');
 
       let body;
       if (published) {
@@ -43,7 +43,7 @@
   };
 
   /* ---------------- The month in BioAni ---------------- */
-  const glyph = IB.svg.cell('#DDEEDF', '#1B5E3C');
+  const glyph = IB.svg.cell('#DCE9E1', '#1B4D43');
   IB.components.MonthlyHero = {
     render: function (ed) {
       const joinerIds = ed.newJoiners || [];

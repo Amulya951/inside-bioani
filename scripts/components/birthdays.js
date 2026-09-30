@@ -10,8 +10,8 @@
   const SHORT = m => IB.MONTHS[m - 1].slice(0, 3);
 
   const BALLOONS = [
-    ['#E6C766', 8, 58, 4.6, 0], ['#237A4E', 26, 70, 5.4, .6], ['#1A3A6B', 46, 62, 5, .3],
-    ['#9FD3AE', 64, 54, 4.2, .9], ['#C9A13B', 80, 66, 5.8, .2]
+    ['#9BC92E', 8, 58, 4.6, 0], ['#5E9A78', 26, 70, 5.4, .6], ['#2B6254', 46, 62, 5, .3],
+    ['#A9CDB8', 64, 54, 4.2, .9], ['#9BC92E', 80, 66, 5.8, .2]
   ];
 
   // Small cross-link when a birthday person was also promoted this edition.
@@ -154,7 +154,7 @@
 
   /* ---------------- Confetti (no library) ---------------- */
   IB.confetti = (function () {
-    const COLORS = ['#E6C766', '#C9A13B', '#237A4E', '#9FD3AE', '#1A3A6B', '#FFFBF0'];
+    const COLORS = ['#9BC92E', '#9BC92E', '#5E9A78', '#A9CDB8', '#2B6254', '#F8F6F1'];
     let cvs, ctx, parts = [], raf = null;
     function size() { const dpr = Math.min(devicePixelRatio || 1, 2); cvs.width = innerWidth * dpr; cvs.height = innerHeight * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
     function tick() {

@@ -85,7 +85,7 @@
     const aria = label || (name ? 'Photograph of ' + name + ' coming soon' : 'Photograph coming soon');
     if (kind === 'emblem') {
       return '<div class="ph ph-emblem" role="img" aria-label="' + IB.esc(aria) + '">' +
-        '<span class="ph-em" aria-hidden="true">' + IB.svg.cell('rgba(230,199,102,.12)', '#E6C766') + '</span>' +
+        '<span class="ph-em" aria-hidden="true">' + IB.svg.cell('rgba(155,201,46,.12)', '#9BC92E') + '</span>' +
         '<span class="ph-cap" aria-hidden="true">Portrait to come</span></div>';
     }
     return '<div class="ph" role="img" aria-label="' + IB.esc(aria) + '">' +
@@ -184,7 +184,7 @@
         '<path d="M30 4C14 4 5 17 5 31c0 18 15 33 25 37c10-4 25-19 25-37C55 17 46 4 30 4z" fill="' + fill + '"/>' +
         '<ellipse cx="20" cy="22" rx="5" ry="9" fill="' + (shine || '#fff') + '" opacity=".35" transform="rotate(-20 20 22)"/>' +
         '<path d="M27 68l3 5l3-5z" fill="' + fill + '"/>' +
-        '<path d="M30 73c-4 9 4 16 0 24s3 10 1 13" fill="none" stroke="#8a93a3" stroke-width="1.2"/></svg>';
+        '<path d="M30 73c-4 9 4 16 0 24s3 10 1 13" fill="none" stroke="#7F9E92" stroke-width="1.2"/></svg>';
     }
   };
 })();

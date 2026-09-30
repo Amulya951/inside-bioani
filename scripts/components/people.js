@@ -56,7 +56,7 @@
           '<div class="leaders">' + L.map(l => '<article class="leader"><span class="ring">' + IB.ui.portrait(l, { alt: 'Portrait of ' + l.name }) + '</span>' +
           '<h4>' + esc(l.name) + '</h4><p class="role">' + esc(l.designation || '') + '</p>' + ((l.area || l.department) ? '<p class="area">' + esc(l.area || l.department) + '</p>' : '') + '</article>').join('') + '</div>';
       } else {
-        const cell = IB.svg.cell('#DDEEDF', '#1B5E3C');
+        const cell = IB.svg.cell('#DCE9E1', '#1B4D43');
         body = '<div class="lead-empty"><div class="ghosts" aria-hidden="true">' + [1, 2, 3].map(() => '<div class="ghost">' + cell + '</div>').join('') + '</div>' +
           '<div class="empty"><h3 class="display">Leadership portraits are on their way</h3><p>Photographs, names and roles of BioAni\u2019s leadership team will be introduced here.</p>' +
           '<p class="editor-note">Editor: add entries to IB.leadership in data/company.js.</p></div></div>';
