@@ -143,7 +143,8 @@
         '<div class="cells" aria-hidden="true">' + cells + sparks + confetti + '</div>' +
         '<div class="wrap">' +
           '<div class="cover-meta"><span>' + esc(IB.config.company) + ' <strong>internal monthly</strong></span><span>' + esc(ed.label) + ' edition</span></div>' +
-          '<h1 class="mast" id="mast"><span class="m-inside">INSIDE</span><span class="m-bioani">BIOANI</span></h1>' +
+          '<h1 class="mast" id="mast"><span class="m-inside">INSIDE</span><span class="m-bioani">BI<span class="m-o"><span class="m-ring">O</span>' +
+            (IB.brandLogos && IB.brandLogos.leaf ? '<img class="m-leaf" src="' + IB.brandLogos.leaf + '" alt="">' : '') + '</span>ANI</span></h1>' +
           '<div class="cover-grid">' +
             '<div>' +
               '<div class="edition-line"><span class="month">' + esc(IB.MONTHS[ed.month - 1]) + '</span><span class="year">' + ed.year + '</span></div>' +
